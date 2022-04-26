@@ -8,7 +8,7 @@ import {ITrafficListReaderData} from "./traffic-list-reader-data";
   providedIn: 'root'
 })
 export class TrafficListReaderService {
-  private trafficurl = "http://52.234.171.219:8080/trafficurls";
+  private trafficurl = "https://52.234.171.219/trafficurls";
 
   constructor(private http: HttpClient) {
   }
