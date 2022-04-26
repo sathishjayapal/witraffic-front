@@ -8,13 +8,13 @@ import {ITrafficListReaderData} from "./traffic-list-reader-data";
   providedIn: 'root'
 })
 export class TrafficListReaderService {
-  private trafficurls = 'http://52.234.171.219:8080/trafficurls ';
+  private trafficurl = "http://52.234.171.219:8080/trafficurls";
 
   constructor(private http: HttpClient) {
   }
 
   getTrafficReaderList(): Observable<ITrafficListReaderData[]> {
-    return this.http.get<ITrafficListReaderData[]>(this.trafficurls)
+    return this.http.get<ITrafficListReaderData[]>(this.trafficurl)
       .pipe(
         tap(data => console.log('All: ', JSON.stringify(data))),
         catchError(this.handleError)
