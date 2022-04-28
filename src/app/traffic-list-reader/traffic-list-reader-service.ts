@@ -12,7 +12,7 @@ export class TrafficListReaderService {
   private trafficurl = "https://dg5nlup2ew3p2.cloudfront.net/trafficurls";
 
   constructor(private http: HttpClient) {
-  }x
+  }
 
   getTrafficReaderList(): Observable<ITrafficListReaderData[]> {
     return this.http.get<ITrafficListReaderData[]>(this.trafficurl)
