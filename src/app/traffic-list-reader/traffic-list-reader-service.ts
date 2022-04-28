@@ -9,10 +9,10 @@ import {ITrafficListReaderData} from "./traffic-list-reader-data";
 })
 export class TrafficListReaderService {
   private protocol= "http"
-  private trafficurl = "http://witrafficreaderv1.eastus.azurecontainer.io:8080/trafficurls";
+  private trafficurl = "https://dg5nlup2ew3p2.cloudfront.net/trafficurls";
 
   constructor(private http: HttpClient) {
-  }
+  }x
 
   getTrafficReaderList(): Observable<ITrafficListReaderData[]> {
     return this.http.get<ITrafficListReaderData[]>(this.trafficurl)
