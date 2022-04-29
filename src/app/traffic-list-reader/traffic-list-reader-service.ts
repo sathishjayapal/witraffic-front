@@ -9,7 +9,7 @@ import {ITrafficListReaderData} from "./traffic-list-reader-data";
 })
 export class TrafficListReaderService {
   private protocol= "http"
-  private trafficurl = "https://dg5nlup2ew3p2.cloudfront.net";
+  private trafficurl = "http://witrafficreaderv1.eastus.azurecontainer.io:8080/trafficurls";
 
   constructor(private http: HttpClient) {
   }
