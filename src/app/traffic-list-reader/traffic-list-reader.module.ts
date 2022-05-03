@@ -5,6 +5,7 @@ import {ConvertToSpacesPipe} from "../shared/convert-to-spaces.pipe";
 import {RouterModule} from "@angular/router";
 import {SharedModule} from "../shared/shared.module";
 import {FormsModule} from "@angular/forms";
+import {DataTablesModule} from "angular-datatables";
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import {FormsModule} from "@angular/forms";
     RouterModule.forChild([
       {path: 'trafficroads', component: TrafficListReaderComponent},
     ]),
-    SharedModule
+    SharedModule,
+    DataTablesModule
   ]
 })
 

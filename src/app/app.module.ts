@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { DataTablesModule } from "angular-datatables";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TrafficListReaderComponent } from './traffic-list-reader/traffic-list-reader.component';
@@ -17,6 +17,7 @@ import { HomeComponent } from './home/home.component';
   ],
   imports: [
     BrowserModule,
+    DataTablesModule,
     HttpClientModule,
     RouterModule.forRoot([
       {path: 'welcome', component: HomeComponent},

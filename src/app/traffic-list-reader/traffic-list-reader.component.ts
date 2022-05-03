@@ -14,6 +14,7 @@ export class TrafficListReaderComponent implements OnInit , OnDestroy {
   showImage = false;
   errorMessage = '';
   sub!: Subscription;
+  dtOptions: DataTables.Settings = {};
 
   private _listFilter = '';
   get listFilter(): string {
@@ -42,6 +43,11 @@ export class TrafficListReaderComponent implements OnInit , OnDestroy {
   }
 
   ngOnInit(): void {
+    this.dtOptions = {
+      pagingType: 'full_numbers',
+      pageLength: 25,
+      processing: true
+    };
     this.sub = this.trafficListReaderService.getTrafficReaderList().subscribe({
       next: products => {
         this.trafficListReaderData = products;
